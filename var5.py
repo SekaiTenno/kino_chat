@@ -1,9 +1,9 @@
 import telebot
 import csv
-
+from decouple import config
 
 # Создаем бота и указываем токен
-bot = telebot.TeleBot('7091433663:AAFBpwtQAXksVnnzcymp7SVKYDJ2QAlSAeA')
+bot = telebot.TeleBot(config('BOT_API'))
 
 # Загружаем данные из файла movies.csv
 def load_movies():
